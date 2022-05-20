@@ -1,0 +1,93 @@
+.coming-soon {
+    background: center/contain no-repeat url(../../assets/coming_soon.svg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: top;
+    height: 100vh;
+}
+
+.coming-soon .desc {
+    position: relative;
+    font-family: 'Macondo';
+    background-color: hsla(0, 0%, 7%, 0.918);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    gap: 2.3rem;
+    padding: .3rem 1.2rem .8rem;
+}
+
+.desc .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(240, 108, 13, 0.918);
+    text-align: center;
+}
+
+.desc p {
+    text-decoration: underline dashed rgba(240, 108, 13, 0.918);
+}
+
+.connect-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.connect-card .connect {
+    color: rgb(123, 185, 247);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.connect-card > .subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center;
+    gap: .6rem;
+}
+
+.subscribe input,
+.subscribe button {
+    border: none;
+    font-size: calc(16px + 1vmin);
+    padding: .3rem;
+    border-radius: 3px;
+}
+
+.subscribe input {
+    text-indent: .8rem;
+    color: #122;
+    min-width: 75%;
+    max-width: auto;
+    height: 30px;
+}
+
+.subscribe button {
+    color: #fff;
+    height: 40px;
+    font-family: 'Macondo';
+    font-weight: bold;
+    background-color: rgba(240, 108, 13, 0.918);
+    min-width: 20%;
+    /* max-width: auto; */
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: rgb(240, 108, 13);
+    color: #122;
+    transition: all 400ms ease-in;
+}
+
+.subscribe button:not(:hover) {
+    transition: all 300ms ease-out;
+}
