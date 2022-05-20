@@ -1,0 +1,148 @@
+.cus-auth {
+    background-color: hsla(0, 9%, 7%, 0.822);
+    color: #fda069;
+    display: flex;
+    align-items: center;
+    padding: 10rem initial;
+}
+
+.cus-auth-card {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 3px #fda069;
+}
+
+.cus-auth-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.2rem 0 0;
+    padding-bottom: 1.2rem;
+    border-bottom: 4px solid #fda069;
+}
+
+.cus-auth-header .App-name .logo-name {
+    text-shadow: 1px 2px 3px #fffddd;
+}
+
+.cus-auth-header .sign-up::before,
+.cus-auth-header .sign-up::after {
+    content: '\2013';
+}
+
+.cus-auth-header .sign-up {
+    color: #fff;
+    padding: .5rem 0;
+    background-color: hsla(22, 97%, 70%, 0.494);
+    border-radius: 20%;
+}
+
+.cus-auth-body {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem 2rem;
+    width: 100%;
+}
+
+.cus-auth-body .form-header {
+    margin-top: .1rem;
+    width: 95%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header > .form-header-btns {
+    display: flex;
+    gap: .2rem;
+}
+
+.form-header button {
+    width: 50%;
+    padding: .6rem 0;
+    cursor: pointer;
+    border: none;
+    background-color: hsla(22, 97%, 70%, 0.541);
+    color: #fffddd;
+    font-size: 1.1rem;
+}
+
+.form-header .tier-active {
+    background-color: #fff;
+    color: #121212;
+    font-weight: 700;
+}
+
+.premium-info, .freemium-info {
+    background-color: #fffdea;
+    color: #121212;
+    padding: .2rem .5rem;
+    margin-top: .3rem;
+    border-radius: 3px;
+}
+
+.premium-info ul {
+    padding-left: 2rem;
+}
+
+.premium-info ul > li::marker {
+    color: #fda069;
+    font-size: 20px;
+}
+
+.premium-info p {
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 670px) {
+    .cus-auth-card {
+        width: 100%;
+    }
+
+    .cus-auth-header .sign-up {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cus-auth-header .App-name .logo-name {
+        font-size: 1.2rem;
+    }
+
+    .cus-auth-header .App-name .App-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cus-auth-header .App-name {
+        gap: .1rem;
+    }
+
+    .cus-auth-header .sign-up {
+        font-size: 1rem;
+    }
+
+    .cus-auth-card {
+        height: auto;
+    }
+
+
+    .cus-auth-header .sign-up::before,
+    .cus-auth-header .sign-up::after {
+        content: '';
+    }
+
+    .cus-auth-header .sign-up {
+        background-color: transparent;
+        font-size: 1rem;
+        word-spacing: -0.01rem;
+        text-align: end;
+    }
+}

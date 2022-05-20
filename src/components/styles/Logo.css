@@ -1,0 +1,69 @@
+.App-name {
+    display: flex;
+    gap: .5rem;
+}
+
+.App-name .logo-name {
+    align-self: center;
+    text-shadow: 2px 2px 5px #1d1d1d;
+    font-size: 2.2rem;
+}
+
+.App-logo {
+    height: calc(25px + 1vmin);
+    width: calc(25px + 1vmin);
+    pointer-events: none;
+    border: 2px outset #fff;
+    padding: .6rem;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px #fefdff;
+    background-color: #1d1d1d;
+}
+
+.App-logo span {
+    font-weight: bolder;
+    font-size: calc(18px + 1.5vmin);
+    color: #fefdff;
+    border-bottom: 2px groove #fda069;
+    border-top: 2px groove #fda069;
+    text-shadow: 2px 3px 5px #1052be;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo span {
+        animation: App-logo-spin infinite 10s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(.8);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .App-name .logo-name {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .App-name .logo-name {
+        font-size: 1.5rem;
+    }
+
+    .App-name {
+        gap: .2rem;
+    }
+}
