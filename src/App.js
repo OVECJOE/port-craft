@@ -31,12 +31,14 @@ function App() {
             element={<CusAuth
               userData={userData}
               setUserData={setUserData}
-              defaultData={defaultData}  
+              defaultData={defaultData}
             />}
           />
           {userData.loggedIn &&
             <Route path="/dashboard"
-              element={<DashBoard />}
+              element={<DashBoard
+                userData={userData}
+              />}
             />
           }
           <Route path='*' element={<Navigate to="/" replace />} />
