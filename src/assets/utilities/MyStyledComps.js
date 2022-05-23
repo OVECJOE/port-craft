@@ -57,19 +57,22 @@ const Board = styled.div`
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    padding: .5rem 1rem;
+    padding: 1rem;
     width: 50%;
     min-height: 100vh;
     max-height: auto;
-    overflow: hidden auto;
+    gap: 1rem;
 
     ${props => props.control && css`
-        background-color: hsla(22, 97%, 70%, 0.541);
+        background-color: hsla(22, 97%, 70%, 0.241);
+        box-shadow: 2px 2px 2px 1px #021e2f;
         color: #172b4d;
+        width: 55%;
+        font-family: 'Advent Pro', 'Macondo', courier, sans-serif, monospace;
     `}
 
     ${props => props.preview && css`
-        box-shadow: 1px 1px 2px 1px #122122;
+        background-color: #fff;
     `}
 `;
 
