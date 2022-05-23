@@ -7,7 +7,7 @@ import { GoSettings, GoOctoface, GoProject } from 'react-icons/go';
 import { IconContext } from 'react-icons';
 import { Link as RouterLink } from 'react-router-dom';
 
-function MainBoard({ githubData, userData, github_api }) {
+function MainBoard(props) {
     const iconStyle = {
         color: '#fda069',
         size: '25px',
@@ -17,10 +17,10 @@ function MainBoard({ githubData, userData, github_api }) {
         <Main>
             <SideMenu>
                 <IconContext.Provider value={iconStyle}>
-                    {githubData && githubData.avatar_url ?
+                    {props.githubData && props.githubData.avatar_url ?
                         <AvatarImg
-                            src={githubData.avatar_url}
-                            alt={githubData.name}
+                            src={props.githubData.avatar_url}
+                            alt={props.githubData.name}
                             title='Your Github Avatar'
                         /> :
                         <RouterLink to='/dashboard/change_avatar'>
@@ -46,8 +46,12 @@ function MainBoard({ githubData, userData, github_api }) {
                     </RouterLink>
                 </IconContext.Provider>
             </SideMenu>
-            <PreviewBoard />
-            <ControlBoard />
+            <PreviewBoard
+                {...props}
+            />
+            <ControlBoard
+                {...props}
+            />
         </Main>
     )
 }

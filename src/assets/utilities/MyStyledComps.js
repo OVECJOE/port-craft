@@ -29,8 +29,11 @@ const Main = styled.main`
     display: flex;
     flex-direction: row;
     position: relative;
-    justify-content: space-between;
-    height: auto;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    min-height: 100vh;
+    max-height: auto;
 `;
 
 const SideMenu = styled.div`
@@ -43,10 +46,31 @@ const SideMenu = styled.div`
     z-index: 2;
     top: 5%;
     bottom: 5%;
+    left: 1%;
     width: 45px;
     border-radius: 20px;
     box-shadow: 1px 2px 1px 1px #121212;
     background-color: #021e2f;
 `;
 
-export { Div, Main, SideMenu, AvatarImg };
+const Board = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: .5rem 1rem;
+    width: 50%;
+    min-height: 100vh;
+    max-height: auto;
+    overflow: hidden auto;
+
+    ${props => props.control && css`
+        background-color: hsla(22, 97%, 70%, 0.541);
+        color: #172b4d;
+    `}
+
+    ${props => props.preview && css`
+        box-shadow: 1px 1px 2px 1px #122122;
+    `}
+`;
+
+export { Div, Main, SideMenu, AvatarImg, Board };

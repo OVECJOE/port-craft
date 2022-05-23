@@ -8,7 +8,7 @@ function LandingPage(props) {
                 loggedIn={props.loggedIn}
             />
             <main>
-                <h1>
+                <h1 className="welcome-title">
                     Welcome to <span className="company-name">portCraft</span>
                 </h1>
                 <section>

@@ -1,8 +1,10 @@
+import { Board } from '../assets/utilities/MyStyledComps';
+
 function PreviewBoard(props) {
     return (
-        <div>
+        <Board preview>
             PreviewBoard...
-        </div>
+        </Board>
     );
 }
 
