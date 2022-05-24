@@ -115,7 +115,8 @@
 }
 
 .notification-card,
-.research-card {
+.research-card,
+.get-started-info {
     display: flex;
     flex-direction: column;
     min-height: 8rem;
@@ -148,4 +149,38 @@
 .research-card .subscribe button {
     border: none;
     border-radius: 0;
+}
+
+.get-started-info {
+    background-color: hsla(64, 85%, 51%, 0.452);
+}
+
+.get-started-info .get-started-header h3 {
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.get-started-info .get-started-steps {
+    list-style: none;
+    padding-left: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-self: center;
+}
+
+.get-started-steps li {
+    padding: 1rem 1.2rem;
+    background-color: #021e2f;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 0 2px 1px rgba(8, 216, 216, 0.719);
+}
+
+.get-started-steps li code {
+    background-color: #fff;
+    font-size: .8rem;
+    color: #fda069;
 }

@@ -1,0 +1,40 @@
+.preview-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #d8bf25;
+    min-height: 7rem;
+    gap: .1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.slash {
+    color: #121212;
+    font-size: 2.2rem;
+    font-family: 'Roboto';
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.preview-navbar button {
+    color: #380603;
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.preview-navbar .active {
+    color: rgb(211, 60, 14);
+    border-bottom: 3px solid rgb(248, 247, 244);
+    transition: all 800ms ease;
+}
+
+.preview-navbar .active:not(:hover) {
+    transition: all 500ms ease-in-out;
+}

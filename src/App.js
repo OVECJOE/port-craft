@@ -50,7 +50,7 @@ function App() {
                 setGithubData={setGithubData}
               />}
             >
-              <Route path='' element={<Home userData={userData}
+              <Route index element={<Home userData={userData}
                 githubData={githubData} />} />
               <Route path='contact-info' element={<ContactInfo userData={userData}
                 githubData={githubData} />} />

@@ -57,22 +57,23 @@ const Board = styled.div`
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    padding: 1rem;
     width: 50%;
-    min-height: 100vh;
-    max-height: auto;
     gap: 1rem;
 
     ${props => props.control && css`
         background-color: hsla(22, 97%, 70%, 0.241);
         box-shadow: 2px 2px 2px 1px #021e2f;
         color: #172b4d;
+        padding: 1rem;
         width: 55%;
         font-family: 'Advent Pro', 'Macondo', courier, sans-serif, monospace;
     `}
 
     ${props => props.preview && css`
         background-color: #fff;
+        position: sticky;
+        height: 100vh;
+        overflow-y: auto;
     `}
 `;
 

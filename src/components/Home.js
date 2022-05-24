@@ -69,6 +69,38 @@ function Home(props) {
                     <button>Click here to upgrade</button>
                 }
             </div>
+            <div className='get-started-info'>
+                <div className='get-started-header'>
+                    <h3>To set up your portfolio, follow this steps:</h3>
+                    <h6 className='emphasis'>
+                        We assume you have a GitHub account and it is fully set up!
+                    </h6>
+                </div>
+                <ul className='get-started-steps'>
+                    <li>
+                        Click on the <code>Add Contact Info</code> icon on the sidebar
+                        and add your info.
+                    </li>
+                    <li>
+                        Click on the <code>Add or Select Projects</code> icon on the sidebar
+                        and do what you do best.
+                    </li>
+                    <li>
+                        Click on the <code>Theme Customization</code> icon on the sidebar
+                        and customize your portfolio to your taste.
+                    </li>
+                    <li>
+                        Click the <code>Publish</code> button that shows up at the top of the
+                        preview board to generate a link when you feel satisfied.
+                    </li>
+                    <li>
+                        Tada! You have the link to your portfolio for you to share.
+                    </li>
+                </ul>
+                <small>
+                    *Sharing is a future feature for this app.
+                </small>
+            </div>
         </Board>
     )
 }
