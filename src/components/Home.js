@@ -1,9 +1,9 @@
-import { Board } from '../assets/utilities/MyStyledComps';
-import './styles/ControlBoard.css';
 import { GoChevronDown, GoStar } from 'react-icons/go';
 import { GiPunch } from 'react-icons/gi';
+import { Board } from '../assets/utilities/MyStyledComps';
+import './styles/Home.css';
 
-function ControlBoard(props) {
+function Home(props) {
     return (
         <Board control>
             <div className='welcome-card'>
@@ -67,10 +67,10 @@ function ControlBoard(props) {
                         <button>Subscribe for early access</button>
                     </div> :
                     <button>Click here to upgrade</button>
-            }
+                }
             </div>
         </Board>
-    );
+    )
 }
 
-export default ControlBoard;
+export default Home;

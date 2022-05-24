@@ -63,3 +63,12 @@
         transform: scale(1) rotate(360deg);
     }
 }
+
+.active-icon svg {
+    fill: #fff;
+    border-bottom: 3px solid #fda069;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 1px 1px 1px 1px #fff;
+    transition: all 500ms ease;
+}

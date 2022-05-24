@@ -4,11 +4,8 @@ import { Div } from '../assets/utilities/MyStyledComps';
 import './styles/DashBoard.css';
 import fetchData from '../assets/utilities/fetchData';
 
-function DashBoard({ userData }) {
+function DashBoard({ userData, githubData, setGithubData }) {
     const [isLoading, setLoading] = useState(true);
-    const [githubData, setGithubData] = useState(
-        JSON.parse(localStorage.getItem(userData.username)) || {}
-    )
 
     const github_api = "https://api.github.com/users/";
 
