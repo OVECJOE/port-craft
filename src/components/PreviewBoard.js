@@ -10,11 +10,11 @@ function PreviewBoard(props) {
         <Board preview>
             <nav className='preview-navbar'>
                 <button onClick={() => setPageName('about')}
-                    className={pageName === 'about' && 'active'}
+                    className={pageName === 'about' ? 'active' : ''}
                 >ABOUT ME</button>
                 <span className='slash'>/</span>
                 <button onClick={() => setPageName('home')}
-                    className={pageName === 'home' && 'active'}
+                    className={pageName === 'home' ? 'active' : ''}
                 >HOME</button>
             </nav>
             {pageName === 'about' ?
