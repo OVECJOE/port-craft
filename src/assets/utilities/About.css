@@ -1,0 +1,95 @@
+.about-main {
+    padding: 0;
+    margin: -2rem 0 0;
+    font-family: 'Macondo';
+    font-size: max(.8rem, 1.2rem, 1.5rem, 1.6rem);
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 2.5rem 0 0;
+    background-color: #0e0c0f;
+    color: #b6b6b8;
+    font-weight: bolder;
+}
+
+.hero-section > * {
+    width: 50%;
+}
+
+.avatar-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: -0.1rem 0 0;
+    height: auto;
+}
+
+.avatar-card img {
+    width: 100%;
+    border-radius: 40% 2%;
+}
+
+.avatar-card div {
+    position: absolute;
+    top: 0;
+    background-color: #6e641d;
+    color: #fff;
+    padding: .3rem 1.2rem;
+    align-self: flex-end;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.avatar-card div h5 {
+    font-weight: bolder;
+    color: #0e0c0f;
+}
+
+.about-card {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-card .about-bio h2 {
+    color: #d8bf25;
+    border-bottom: 5px solid;
+    margin-bottom: .4rem;
+}
+
+.about-misc {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.about-misc button {
+    padding: .2rem 1.2rem;
+    border-radius: 20px;
+    background-color: #d7bd28;
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.about-misc .social-links {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: .2rem;
+}
+
+.about-misc a {
+    color: #6e641d;
+    transition: all 500ms ease;
+}
+
+.about-misc a:hover {
+    color: #fff;
+    transition: all 500ms ease;
+}
