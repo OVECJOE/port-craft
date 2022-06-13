@@ -1,5 +1,5 @@
-import LandingPageHeader from '../components/LandingPageHeader';
-import './styles/LandingPage.css';
+import LandingPageHeader from '../LandingPageHeader/LandingPageHeader';
+import './LandingPage.css';
 
 function LandingPage(props) {
     return (

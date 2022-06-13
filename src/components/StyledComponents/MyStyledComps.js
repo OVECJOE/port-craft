@@ -32,8 +32,7 @@ const Main = styled.main`
     padding: 0;
     margin: 0;
     gap: 0;
-    min-height: 100vh;
-    max-height: auto;
+    height: 100vh;
 `;
 
 const SideMenu = styled.div`
@@ -57,8 +56,9 @@ const Board = styled.div`
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    width: 50%;
     gap: 1rem;
+    position: fixed;
+    height: 100vh;
 
     ${props => props.control && css`
         background-color: hsla(22, 97%, 70%, 0.241);
@@ -67,13 +67,13 @@ const Board = styled.div`
         padding: 1rem;
         width: 55%;
         font-family: 'Advent Pro', 'Macondo', courier, sans-serif, monospace;
+        right: 0;
+        top: 0;
     `}
 
     ${props => props.preview && css`
-        background-color: #fff;
-        position: sticky;
-        height: 100vh;
-        overflow-y: auto;
+        top: 0;
+        left: 0;
     `}
 `;
 

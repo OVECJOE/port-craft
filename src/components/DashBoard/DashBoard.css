@@ -70,3 +70,18 @@
     transition: all 500ms ease;
     border-radius: 2px;
 }
+
+.go-and-login {
+    background-color: #fda069;
+    text-align: center;
+    margin: 1.5rem 1rem;
+    padding: 20px;
+    color: #121212;
+    border-radius: 3%;
+}
+
+.go-and-login h2 {
+    color: #641921;
+    font-family: 'Impact';
+    font-size: 1.8rem;
+}

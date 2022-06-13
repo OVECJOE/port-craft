@@ -1,13 +1,18 @@
 import { GoChevronDown, GoStar } from 'react-icons/go';
 import { GiPunch } from 'react-icons/gi';
-import { Board } from '../assets/utilities/MyStyledComps';
-import './styles/Home.css';
+import { useContext } from 'react';
 
-function Home(props) {
+import { Board } from '../StyledComponents/MyStyledComps';
+import { UserInfoContext } from '../../contexts/UserInfoContext';
+import './ControlHome.css';
+
+function ControlHome() {
+    const { userInfo } = useContext(UserInfoContext);
+
     return (
         <Board control>
             <div className='welcome-card'>
-                <h1 className='welcome-header'>HELLO, {props.githubData.login}!</h1>
+                <h1 className='welcome-header'>HELLO, {userInfo.username}!</h1>
                 <h4 className='welcome-body'>
                     This is your <em className='emphasis'>Control Board</em> where you perform the magic...
                 </h4>
@@ -26,20 +31,20 @@ function Home(props) {
                 <div className='instruction-card'>
                     <div className='user-tier'>
                         <p>
-                            {props.userData.isPremium ? 'Premium' : 'Freemium'}
-                            {props.userData.isPremium &&
+                            {userInfo.isPremium ? 'Premium' : 'Freemium'}
+                            {userInfo.isPremium &&
                                 <span className='premium-star'>
                                     <GoStar />
                                 </span>
                             }
                         </p>
-                        {!props.userData.isPremium &&
+                        {!userInfo.isPremium &&
                             <button className='upgrade-btn'>Upgrade <GiPunch /></button>
                         }
                     </div>
                     <button className='premium-benefits-btn'>Learn more about premium benefits</button>
                     <p>
-                        Visit your <a href={props.githubData.html_url} className='external-links'>
+                        Visit your <a href={userInfo.contactInfo.github} className='external-links'>
                             github account</a> to fill in your important details, in case you haven't!
                     </p>
                 </div>
@@ -55,10 +60,10 @@ function Home(props) {
                 <p>
                     We are currently working on an API that provides you with project-based resources
                     and challenges (based on your stack) scoured from the internet. If you want to benefit from
-                    this feature, please {props.userData.isPremium ? 'subscribe for early access.' :
+                    this feature, please {userInfo.isPremium ? 'subscribe for early access.' :
                         'click the button below to upgrade.'}
                 </p>
-                {props.userData.isPremium ?
+                {userInfo.isPremium ?
                     <div className='subscribe'>
                         <input
                             type='text'
@@ -105,4 +110,4 @@ function Home(props) {
     )
 }
 
-export default Home;
+export default ControlHome;

@@ -1,6 +1,6 @@
-import './styles/LandingPageHeader.css';
+import './LandingPageHeader.css';
 import { Link as RouterLink } from 'react-router-dom';
-import Logo from './Logo';
+import Logo from '../Logo/Logo';
 
 function LandingPageHeader(props) {
     return (

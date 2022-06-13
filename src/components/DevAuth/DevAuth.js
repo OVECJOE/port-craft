@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './styles/DevAuth.css';
+import './DevAuth.css';
 
 function DevAuth() {
     const [devInfo, setDevInfo] = useState({

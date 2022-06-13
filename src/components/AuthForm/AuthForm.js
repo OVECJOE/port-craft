@@ -1,5 +1,4 @@
-import { Navigate } from 'react-router-dom';
-import './styles/AuthForm.css';
+import './AuthForm.css';
 
 function AuthForm({ handleChange, handleSubmit, userData, isPremium, passStrength }) {
     return (
@@ -68,7 +67,6 @@ function AuthForm({ handleChange, handleSubmit, userData, isPremium, passStrengt
                 </>
             }
             <button>Sign Up</button>
-            {userData.loggedIn && <Navigate replace to='/dashboard' />}
         </form>
     )
 }

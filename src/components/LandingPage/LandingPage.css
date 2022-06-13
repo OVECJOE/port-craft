@@ -5,6 +5,17 @@ main {
     padding: 2rem 1.5rem 3rem;
     gap: 1.5rem;
     font-family: 'Poppins';
+    animation: slide-and-scale 1.5s linear 0s 1 normal
+}
+
+@keyframes slide-and-scale {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 main .welcome-title {

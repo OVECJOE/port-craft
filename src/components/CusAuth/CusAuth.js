@@ -1,10 +1,24 @@
-import { useState, useEffect } from 'react';
-import Logo from '../components/Logo';
-import AuthForm from '../components/AuthForm';
-import './styles/CusAuth.css';
+import { useState, useEffect, useContext } from 'react';
+import { Navigate } from 'react-router-dom';
 
-function CusAuth({ userData, setUserData, defaultData }) {
-    const [isSigned, setIsSigned] = useState(false);
+import Logo from '../Logo/Logo';
+import AuthForm from '../AuthForm/AuthForm';
+import { UserInfoContext } from '../../contexts/UserInfoContext';
+import { changeProperty } from '../../utils/utils';
+import './CusAuth.css';
+
+function CusAuth() {
+    const { userInfo, dispatch } = useContext(UserInfoContext);
+
+    const [userData, setUserData] = useState({
+        username: "",
+        email: "",
+        gender: "",
+        loggedIn: false,
+        isPremium: false,
+        password: "",
+        confirmPassword: ""
+    });
     const [premiumUser, setPremiumUser] = useState(false);
     const [passStrength, setPassStrength] = useState('weak');
 
@@ -34,15 +48,12 @@ function CusAuth({ userData, setUserData, defaultData }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        if (userData.isPremium) {
-            if (userData.password !== userData.confirmPassword) {
-                alert('Passwords did not match!');
-                return;
-            }
+        
+        if (userData.isPremium && userData.password !== userData.confirmPassword) {
+            alert('Passwords did not match!');
+            return;
         }
-
-        setIsSigned(true);
+        
         setUserData(prevUserData => ({
             ...prevUserData,
             loggedIn: true
@@ -61,15 +72,16 @@ function CusAuth({ userData, setUserData, defaultData }) {
     }, [premiumUser]);
 
     useEffect(() => {
+        const keys = Object.keys(userData).slice(0, -1);
         if (userData.loggedIn) {
-            localStorage.setItem('portCraftUser',
-                JSON.stringify(userData));
+            changeProperty(dispatch, userData, keys);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isSigned]);
+    }, [userData.loggedIn]);
 
     return (
         <main className='cus-auth'>
+            {userInfo.loggedIn && <Navigate to='/dashboard' replace />}
             <div className='cus-auth-card'>
                 <div className="cus-auth-header">
                     <Logo />
