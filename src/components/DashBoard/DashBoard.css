@@ -64,7 +64,7 @@
     }
 }
 
-.active-icon svg {
+.active svg {
     background-color: #fff;
     box-shadow: 2px 1px 2px 1px #fda069;
     transition: all 500ms ease;

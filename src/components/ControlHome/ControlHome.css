@@ -24,6 +24,7 @@
 
 .port-info-card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: .8rem;
     margin: 1.1rem 0;
@@ -32,13 +33,14 @@
 }
 
 .port-info-card > * {
-    width: 50%;
+    width: 40%;
     border-radius: 10px;
     box-shadow: 2px 12px 20px 1px rgba(17, 34, 34, 0.322);
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 1.3rem;
 }
+
 
 .port-info-card .news-card {
     background-color: rgba(245, 227, 66, 0.437);
@@ -66,6 +68,7 @@
     border-radius: 6px;
     border: none;
     cursor: pointer;
+    transition: all 800ms ease;
 }
 
 .port-info-card button:hover,
@@ -74,13 +77,6 @@
     color: hsla(53, 95%, 8%, 0.877);
     box-shadow: 2px 2px 2px 2px #3a1703;
     transition: all 800ms ease-in-out;
-}
-
-.port-info-card button:not(:hover),
-.research-card button:not(:hover) {
-    transition: all 800ms ease;
-    color: #fda069;
-    background-color: #021e2f;
 }
 
 .port-info-card .instruction-card .user-tier {
@@ -183,4 +179,38 @@
     background-color: #fff;
     font-size: .8rem;
     color: #fda069;
+}
+@media (max-width: 574px) {
+    .port-info-card > * {
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .get-started-info .get-started-steps {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .port-info-card {
+        justify-content: space-around;
+    }
+
+    .get-started-info {
+        align-items: center;
+        align-self: center;
+        padding: .5rem 1.2rem;
+    }
+    .get-started-info .get-started-steps {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .get-started-steps li {
+        max-width: 25%;
+        min-height: 100px;
+        overflow-x: auto;
+    }
 }

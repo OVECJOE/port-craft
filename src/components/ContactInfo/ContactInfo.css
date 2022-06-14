@@ -1,0 +1,12 @@
+.add-contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: .9rem;
+}
+
+.end-of-contact-form {
+    color: #fda069;
+    width: 100%;
+}

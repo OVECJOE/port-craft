@@ -10,6 +10,7 @@ import ControlHome from '../components/ControlHome/ControlHome';
 import ContactInfo from '../components/ContactInfo/ContactInfo';
 import DonateBoard from '../components/DonateBoard/DonateBoard';
 import ProjectBoard from '../components/ProjectBoard/ProjectBoard';
+import SkillBoard from '../components/SkillBoard/SkillBoard';
 import ThemeCustom from '../components/ThemeCustom/ThemeCustom';
 import './App.css';
 
@@ -28,8 +29,9 @@ function App() {
             <Route path="/dashboard/*"
               element={<DashBoard />}
             >
-              <Route index element={<ControlHome />} />
+              <Route path='home' element={<ControlHome />} />
               <Route path='contact-info' element={<ContactInfo />} />
+              <Route path='skills' element={<SkillBoard />} />
               <Route path='projects' element={<ProjectBoard />} />
               <Route path='themes' element={<ThemeCustom />} />
               <Route path='donate' element={<DonateBoard />} />

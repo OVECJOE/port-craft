@@ -4,7 +4,6 @@ import { Navigate } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import AuthForm from '../AuthForm/AuthForm';
 import { UserInfoContext } from '../../contexts/UserInfoContext';
-import { changeProperty } from '../../utils/utils';
 import './CusAuth.css';
 
 function CusAuth() {
@@ -74,14 +73,16 @@ function CusAuth() {
     useEffect(() => {
         const keys = Object.keys(userData).slice(0, -1);
         if (userData.loggedIn) {
-            changeProperty(dispatch, userData, keys);
+            for (const key of keys) {
+                dispatch({type: 'UPDATE_PROPERTY', key, value: userData[key]});
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [userData.loggedIn]);
 
     return (
         <main className='cus-auth'>
-            {userInfo.loggedIn && <Navigate to='/dashboard' replace />}
+            {userInfo.loggedIn && <Navigate to='/dashboard/home' replace />}
             <div className='cus-auth-card'>
                 <div className="cus-auth-header">
                     <Logo />

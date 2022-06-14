@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import './DevAuth.css';
 
 function DevAuth() {
-    const [devInfo, setDevInfo] = useState({
-        email: "",
-        subscribed: false
-    });
+    const [devInfo, setDevInfo] = useState(
+        JSON.parse(localStorage.getItem('devInfo')) ||
+        {email: "", subscribed: false}
+    );
 
-    const storeDevInfo = () => {
+    const storeDevInfo = (e) => {
+        e.preventDefault();
+
         setDevInfo(dev_info => ({
             ...dev_info,
             subscribed: true
@@ -24,7 +26,7 @@ function DevAuth() {
     };
 
     useEffect(() => {
-        devInfo.subscribed && localStorage.setItem('portCraftDevInfo',
+        devInfo.subscribed && localStorage.setItem('devInfo',
             JSON.stringify(devInfo))
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [devInfo.subscribed])
@@ -44,7 +46,7 @@ function DevAuth() {
                         to learn more about the project <code>or/and</code> subscribe
                         to our newsletter to get updates on this page's status.
                     </h4>
-                    <div className='subscribe'>
+                    <form className='subscribe' onSubmit={storeDevInfo}>
                         <input
                             type="email"
                             name="email"
@@ -53,10 +55,10 @@ function DevAuth() {
                             onChange={handleChange}
                             required
                         />
-                        <button onClick={storeDevInfo}>
+                        <button>
                             Subscribe
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </main>

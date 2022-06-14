@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import MainBoard from './MainBoard';
 import { Div } from '../StyledComponents/MyStyledComps';
 import './DashBoard.css';
-import { fetchData, changeProperty } from '../../utils/utils';
+import { fetchData } from '../../utils/utils';
 import { UserInfoContext } from '../../contexts/UserInfoContext';
 
 function DashBoard() {
@@ -27,7 +27,9 @@ function DashBoard() {
                     name: githubData.name, photo: githubData.avatar_url,
                     bio: githubData.bio, location: githubData.location,
                 };
-                changeProperty(dispatch, keys);
+                for (const key of Object.keys(keys)) {
+                    dispatch({type: 'UPDATE_PROPERTY', key, value: keys[key]});
+                }
                 return setTimeout(() => setLoading(!value), 1000);
             });
         } else {
@@ -36,7 +38,7 @@ function DashBoard() {
               }, 3000);
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isLoading]);
+    }, [isLoading, githubData]);
 
     return (
         userInfo.loggedIn ?
