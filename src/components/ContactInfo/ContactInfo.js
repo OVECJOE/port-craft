@@ -1,19 +1,58 @@
 import { BsFillPhoneFill, BsLinkedin } from 'react-icons/bs';
-import { MdEmail, MdFacebook } from 'react-icons/md';
+import { MdEmail, MdFacebook, MdCancel } from 'react-icons/md';
 import { IconContext } from 'react-icons';
 import { FaInstagramSquare, FaTwitter, FaWhatsappSquare, FaGithubAlt } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+
 import { Div } from '../StyledComponents/MyStyledComps';
+import { UserInfoContext } from '../../contexts/UserInfoContext';
 import './ContactInfo.css';
 
-function ContactInfo(props) {
+function ContactInfo() {
+    const { userInfo, dispatch } = useContext(UserInfoContext);
+
     const [formHeader, setFormHeader] = useState({
         name: "",
-        instruction: ""
-    }); //cft: Contact Form Title
+        instruction: "",
+    });
+    const [formData, setFormData] = useState({
+        name: "",
+        value: "",
+        submitted: false
+    });
 
     const changeformHeader = (name, instruction) => {
-        setFormHeader({ name: name.toUpperCase(), instruction: `Enter ${instruction}` });
+        setFormHeader({
+            name: name.toUpperCase(),
+            instruction: `Enter ${instruction}`
+        });
+    };
+
+    const handleChange = (e) => setFormData({
+        name: formHeader.name.toLowerCase(),
+        value: e.target.value,
+    });
+
+    const addContact = (e) => {
+        e.preventDefault();
+
+        dispatch({
+            type: 'ADD_CONTACT_LINK',
+            key: formData.name,
+            value: formData.value
+        });
+
+        setFormData((prev) => ({
+            ...prev,
+            value: "",
+        }));
+    };
+
+    const removeContact = (key) => {
+        dispatch({
+            type: 'REMOVE_CONTACT_LINK',
+            key: key,
+        });
     };
 
     return (
@@ -35,38 +74,63 @@ function ContactInfo(props) {
                         Add Email Address
                     </div>
                 </div>
-                <IconContext.Provider value={{size: '35px'}}>
+                <IconContext.Provider value={{ size: '35px' }}>
                     <div className='indirect-contact'>
-                        <MdFacebook id='facebook' onClick={() => changeformHeader('facebook', 'Facebook URL')} />
-                        <FaInstagramSquare id='instagram' onClick={() => changeformHeader('instagram', 'Instagram URL')} />
-                        <FaTwitter id='twitter' onClick={() => changeformHeader('twitter', 'Twitter URL')} />
-                        <BsLinkedin id='linkedin' onClick={() => changeformHeader('linkedin', 'LinkedIn URL')} />
-                        <FaWhatsappSquare id='whatsapp' onClick={() => changeformHeader('whatsapp', 'Whatsapp URL')} />
-                        <FaGithubAlt id='github' onClick={() => changeformHeader('github', 'Github URL')} />
+                        <MdFacebook title='Facebook' id='facebook'
+                            onClick={() => changeformHeader('facebook', 'Facebook URL')}
+                        />
+                        <FaInstagramSquare id='instagram' title='Instagram'
+                            onClick={() => changeformHeader('instagram', 'Instagram URL')}
+                        />
+                        <FaTwitter id='twitter' title='Twitter'
+                            onClick={() => changeformHeader('twitter', 'Twitter URL')}
+                        />
+                        <BsLinkedin id='linkedin' title='LinkedIn'
+                            onClick={() => changeformHeader('linkedin', 'LinkedIn URL')}
+                        />
+                        <FaWhatsappSquare id='whatsapp' title='WhatsApp'
+                            onClick={() => changeformHeader('whatsapp', 'Whatsapp URL')}
+                        />
+                        <FaGithubAlt id='github' title='Github'
+                            onClick={() => changeformHeader('github', 'Github URL')}
+                        />
                     </div>
                 </IconContext.Provider>
             </Div>
             <Div rightCard column>
                 {formHeader.name ?
                     <>
-                        <form className='add-contact-form'>
+                        <form className='add-contact-form' onSubmit={addContact}>
                             <h3 className='form-title'>{formHeader.name}</h3>
                             <label htmlFor='contact-input'>{formHeader.instruction}</label>
                             <input
                                 id='contact-input'
                                 type="text"
                                 placeholder={formHeader.instruction}
-                                // onChange={}
+                                onChange={handleChange}
                                 name='value'
-                                // value={}
+                                value={formData.value}
                                 required
                             />
                             <button>Add</button>
                         </form>
                         <hr className='end-of-contact-form' />
+                        <div className='contacts'>
+                            {Object.keys(userInfo.contactInfo).map(key => {
+                                return (
+                                    <div className='contact' key={key}>
+                                        <MdCancel onClick={() => removeContact(key)} />
+                                        <div>
+                                            <h6>{key}</h6>
+                                            <p>{userInfo.contactInfo[key]}</p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </> :
                     <h1>
-                        Click one of the buttons on the left to add info
+                        Click one of the buttons or icons to add info
                     </h1>
                 }
             </Div>

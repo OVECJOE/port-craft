@@ -36,7 +36,12 @@ export const userInfoReducer = (state, action) => {
                 contactInfo: { ...state.contactInfo, [action.key]: action.value }
             };
         case 'REMOVE_CONTACT_LINK':
-            return state.contactInfo.filter(key => key !== action.key);
+            const contactInfo = Object.assign({}, state.contactInfo);
+            delete contactInfo[action.key];
+            return {
+                ...state,
+                contactInfo: contactInfo
+            };
         case 'ADD_SKILL':
             return {
                 ...state,

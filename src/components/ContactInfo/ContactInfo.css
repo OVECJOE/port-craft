@@ -2,11 +2,103 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: space-between;
-    gap: .9rem;
+    height: 100%;
+    gap: .5rem;
+    height: 50%;
+    justify-content: space-around;
+}
+
+.add-contact-form .form-title{
+    border-bottom: 3px outset #fda069;
+    text-align: center;
+}
+
+.add-contact-form input,
+.add-contact-form button {
+    height: 20%;
+    color: #021e2f;
+    font-weight: 800;
+    padding: .2rem .3rem;
+    transition: all 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+.add-contact-form input{
+    text-indent: 1%;
+    border: 1px solid #fda069;
 }
 
 .end-of-contact-form {
-    color: #fda069;
+    background-color: #fda069;
     width: 100%;
+    height: 3px;
+    border: none;
+    border-radius: 50%;
+}
+
+
+.add-contact-form button{
+    background: #fda069;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.add-contact-form button:hover{
+    background: #021e2f;
+    box-shadow: 4px 2px 5px 2px #fda069;
+    color: #fda069;
+    font-weight: 800;
+    transition: all 0.4s ease-in;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .2rem;
+    width: 100%;
+    height: 40%;
+    background: white;
+    color: #021e2f;
+}
+
+.contacts, .contacts .contact {
+    padding: .2rem;
+    border-radius: 3px;
+    position: relative;
+}
+
+.contacts .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+    height: 25%;
+    background-color: rgba(17, 17, 17, 0.267);
+}
+
+.contacts .contact > svg {
+    position: absolute;
+    right: .2rem;
+    top: .1rem;
+    cursor: pointer;
+    transition: all 500ms ease-in;
+}
+
+.contacts .contact > svg:hover {
+    background-color: #021e2f;
+    color: #fda069;
+    transition: all 500ms ease-out;
+    border-radius: 50%;
+}
+
+.contacts .contact > div > h6 {
+    font-size: .8rem;
+}
+
+.contacts .contact > div > p {
+    font-size: .6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

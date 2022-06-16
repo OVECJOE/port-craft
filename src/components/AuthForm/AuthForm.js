@@ -22,7 +22,7 @@ function AuthForm({ handleChange, handleSubmit, userData, isPremium, passStrengt
                 required
             />
             <div className='gender-menu'>
-                <label htmlFor='gender'>Select Your Gender </label>
+                <label htmlFor='gender'>Select Your Gender</label>
                 <select
                     id='gender'
                     value={userData.gender}
