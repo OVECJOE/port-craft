@@ -151,7 +151,6 @@ const Main = styled.main`
     margin: 0;
     gap: 0;
     height: 100vh;
-    width: 100vw;
 `;
 
 const SideMenu = styled.div`

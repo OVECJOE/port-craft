@@ -119,12 +119,12 @@
     padding: .6rem;
     position: relative;
     font-family: 'Advent Pro', 'Macondo', courier, sans-serif, monospace;
-    transition: all 1s ease-out;
+    transition: all 600ms ease-out;
 }
 
 .skills-list .skill:hover {
     background-color: rgba(0, 0, 0, 0.829);
-    transition: all 600ms ease-in;
+    transition: all 300ms ease-in;
     transform: translate(-1rem, -.7rem) scale(.8) rotate(360deg);
     box-shadow: inset 2px 2px 2px 2px #021e2f;
 }
