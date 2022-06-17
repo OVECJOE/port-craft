@@ -30,11 +30,11 @@ const Div = styled.div`
 
     ${props => props.rightCard && css`
         width: 50%;
-        height: 60%;
         background-color: #021e2f;
         padding: 1rem;
         border-radius: 3%;
         font-weight: 500;
+        overflow-y: auto;
 
         & > h1 {
             text-align: center;
@@ -42,9 +42,9 @@ const Div = styled.div`
             font-weight: 500;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
             width: 100%;
-            height: 50%;
+            height: auto;
             margin: 0;
         }
 
@@ -151,6 +151,7 @@ const Main = styled.main`
     margin: 0;
     gap: 0;
     height: 100vh;
+    width: 100vw;
 `;
 
 const SideMenu = styled.div`
