@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/port-craft/static/css/main.d0ae7d67.css",
-    "main.js": "/port-craft/static/js/main.fe077633.js",
+    "main.css": "/port-craft/static/css/main.edd9ed1e.css",
+    "main.js": "/port-craft/static/js/main.cb7f8c2e.js",
     "static/js/787.de007b2f.chunk.js": "/port-craft/static/js/787.de007b2f.chunk.js",
     "static/media/skill_bg.jpg": "/port-craft/static/media/skill_bg.e9a3cb5709f850c941a9.jpg",
     "static/media/loading.gif": "/port-craft/static/media/loading.6cc3a7d95d0b605ce55f.gif",
     "static/media/coming-soon.gif": "/port-craft/static/media/coming-soon.fc6cdd6be160e7a88f24.gif",
     "index.html": "/port-craft/index.html",
-    "main.d0ae7d67.css.map": "/port-craft/static/css/main.d0ae7d67.css.map",
-    "main.fe077633.js.map": "/port-craft/static/js/main.fe077633.js.map",
+    "main.edd9ed1e.css.map": "/port-craft/static/css/main.edd9ed1e.css.map",
+    "main.cb7f8c2e.js.map": "/port-craft/static/js/main.cb7f8c2e.js.map",
     "787.de007b2f.chunk.js.map": "/port-craft/static/js/787.de007b2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0ae7d67.css",
-    "static/js/main.fe077633.js"
+    "static/css/main.edd9ed1e.css",
+    "static/js/main.cb7f8c2e.js"
   ]
 }
