@@ -160,15 +160,13 @@ const SideMenu = styled.div`
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem .1rem;
     top: 0;
     bottom: 0;
     left: 0;
-    border-radius: 0 3% 3% 0;
     width: 45px;
     z-index: 2;
     background-color: #021e2f;
-    box-shadow: 2px 3px 10px 0px #fda269;
+    box-shadow: 2px 2px 10px 2px #fda269;
 
     @media (min-width: 1025px) {
         width: 60px;

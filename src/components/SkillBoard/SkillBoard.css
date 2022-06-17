@@ -1,0 +1,178 @@
+.skill-board {
+    position: relative;
+    /* display: flex;
+    justify-content: space-between; */
+    width: 100vw;
+    margin-left: 45px;
+    padding: .2rem 1.5rem;
+    color: #021e2f;
+    background-color: #fda069;
+}
+
+.skill-board .add-skill-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+}
+
+.add-skill-card .add-skill-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 85%;
+}
+
+.add-skill-card h1 {
+    font-size: calc(18px + 2vmin);
+    width: 75%;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.add-skill-form .skill-input {
+    display: flex;
+    flex-direction: column;
+    padding: .6rem;
+    border-left: 3px solid #021e2f;
+    border-right: 3px solid #021e2f;
+    border-radius: 8%;
+}
+
+.skill-input input, 
+.skill-input select,
+.add-skill-form button {
+    height: 2rem;
+    border: 0;
+}
+
+.skill-input input, 
+.skill-input select {
+    text-indent: 1%;
+    border-radius: 8%;
+}
+
+.skill-input select,
+.add-skill-form button {
+    cursor: pointer;
+    background-color: #021e2f;
+    color: #fda069;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.add-skill-form button {
+    border-radius: 3px;
+    width: 75%;
+    align-self: center;
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+    transition: all 500ms ease;
+}
+
+.add-skill-form button:hover {
+    background: center/cover no-repeat url(../../assets/skill_bg.jpg);
+    transition: all 1s ease;
+    color: #021e2f;
+}
+
+.skill-board .skills-list {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    bottom: 2%;
+    width: 35%;
+    padding: 1.2rem 1rem;
+    border-radius: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: center/cover no-repeat url(../../assets/skill_bg.jpg);
+    background-color: #021e2f;
+    background-blend-mode: difference;
+    gap: .4rem;
+    overflow-y: auto;
+}
+
+.skills-list > h1 {
+    text-align: center;
+    font-family: 'Macondo';
+}
+
+.skills-list .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .4rem;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    background-color: rgba(2, 30, 47, 0.89);
+    color: #fda069;
+    border-radius: 5%;
+    padding: .6rem;
+    position: relative;
+    font-family: 'Advent Pro', 'Macondo', courier, sans-serif, monospace;
+    transition: all 1s ease-out;
+}
+
+.skills-list .skill:hover {
+    background-color: rgba(0, 0, 0, 0.829);
+    transition: all 600ms ease-in;
+    transform: translate(-1rem, -.7rem) scale(.8) rotate(360deg);
+    box-shadow: inset 2px 2px 2px 2px #021e2f;
+}
+
+.skills-list .skill > img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: .6rem;
+    font-family: monospace;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.skills-list .skill .delete-btn {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    color: #021e2f;
+    cursor: pointer;
+    border-radius: 30%;
+    background-color: #fd9f69;
+    transform: rotate(270deg);
+    transition: all 500ms ease-in;
+}
+
+.skills-list .skill .delete-btn:hover {
+    background-color: #fff;
+    transition: all 500ms ease-in;
+    transform: rotate(90deg);
+}
+
+.skills-list .skill .skill-level {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    padding: .2rem .6rem;
+    border-radius: 2% 2% 15%;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #fd9f69;
+    color: #021e2f;
+}
+
+.skills-list .skill .skill-name {
+    font-size: 1.2rem;
+    min-width: 100%;
+    text-align: center;
+}
