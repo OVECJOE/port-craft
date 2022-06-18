@@ -82,7 +82,7 @@ function CusAuth() {
 
     return (
         <main className='cus-auth'>
-            {userInfo.loggedIn && <Navigate to='/dashboard/home' replace />}
+            {userInfo.loggedIn && <Navigate to='/port-craft/dashboard/home' replace />}
             <div className='cus-auth-card'>
                 <div className="cus-auth-header">
                     <Logo />

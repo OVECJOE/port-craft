@@ -11,10 +11,10 @@ function LandingPageHeader(props) {
             <label htmlFor="checkbox_toggle" className="hamburger"></label>
 
             <div className="App-header-btns">
-                <RouterLink to="/developers">
+                <RouterLink to="/port-craft/developers">
                     <button>For Developers</button>
                 </RouterLink>
-                <RouterLink to={props.loggedIn ? "/dashboard" : "/consumers"}>
+                <RouterLink to={props.loggedIn ? "/port-craft/dashboard" : "/port-craft/consumers"}>
                     <button>For Consumers</button>
                 </RouterLink>
             </div>

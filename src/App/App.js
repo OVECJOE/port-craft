@@ -21,12 +21,12 @@ function App() {
       <UserInfoContextProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/developers" element={<DevAuth />} />
-            <Route path="/consumers"
+            <Route path="/port-craft" element={<LandingPage />} />
+            <Route path="/port-craft/developers" element={<DevAuth />} />
+            <Route path="/port-craft/consumers"
               element={<CusAuth />}
             />
-            <Route path="/dashboard/*"
+            <Route path="/port-craft/dashboard/*"
               element={<DashBoard />}
             >
               <Route path='home' element={<ControlHome />} />
