@@ -4,5 +4,6 @@
 
 ### Live Demo
 
-[https://ovecjoe.github.io/port-craft/](https://ovecjoe.github.io/port-craft/)
-[[https://](https://portcraft.netlify.app/)](https://portcraft.netlify.app/)
+- [https://ovecjoe.github.io/port-craft/](https://ovecjoe.github.io/port-craft/)
+
+- [[https://](https://portcraft.netlify.app/)](https://portcraft.netlify.app/)
