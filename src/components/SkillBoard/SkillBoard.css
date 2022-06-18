@@ -1,29 +1,29 @@
 .skill-board {
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 100vw;
-    margin-left: 45px;
-    padding: .2rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    left: auto;
     color: #021e2f;
+    padding: 1rem 1rem 1rem 2.2rem;
+    margin-left: 45px;
     background-color: #fda069;
+    position: absolute;
+    width: 100vw;
 }
 
 .skill-board .add-skill-card {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    width: 60%;
-    height: 100%;
     justify-content: center;
+    max-width: 90%;
 }
 
 .add-skill-card .add-skill-form {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    width: 85%;
 }
 
 .add-skill-card h1 {
@@ -84,21 +84,21 @@
 }
 
 .skill-board .skills-list {
-    position: absolute;
-    right: 1%;
-    top: 2%;
-    bottom: 2%;
-    width: 35%;
-    padding: 1.2rem 1rem;
-    border-radius: 3%;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    background: center/cover no-repeat url(../../assets/skill_bg.jpg);
-    background-color: #021e2f;
-    background-blend-mode: difference;
     gap: .4rem;
-    overflow-y: auto;
+    width: 100vw;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    overflow: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.skill-board .skills-list::-webkit-scrollbar { 
+    display: none;
 }
 
 .skills-list > h1 {
@@ -110,24 +110,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: .4rem;
     align-items: center;
     width: 10rem;
     height: 10rem;
-    background-color: rgba(2, 30, 47, 0.89);
+    flex-shrink: 0;
+    background: center/cover no-repeat url(../../assets/skill_bg.jpg);
+    background-color: #021e2f;
+    background-blend-mode: difference;
     color: #fda069;
     border-radius: 5%;
     padding: .6rem;
     position: relative;
     font-family: 'Advent Pro', 'Macondo', courier, sans-serif, monospace;
     transition: all 600ms ease-out;
+    box-shadow: inset 2px 2px 2px 2px #021e2f;
 }
 
 .skills-list .skill:hover {
     background-color: rgba(0, 0, 0, 0.829);
     transition: all 300ms ease-in;
-    transform: translate(-1rem, -.7rem) scale(.8) rotate(360deg);
-    box-shadow: inset 2px 2px 2px 2px #021e2f;
 }
 
 .skills-list .skill > img {
@@ -145,7 +148,7 @@
 .skills-list .skill .delete-btn {
     position: absolute;
     top: 0;
-    left: 2%;
+    left: auto;
     color: #021e2f;
     cursor: pointer;
     border-radius: 30%;
@@ -175,36 +178,6 @@
 .skills-list .skill .skill-name {
     font-size: 1.2rem;
     min-width: 100%;
+    background-color: #222;
     text-align: center;
-}
-
-@media (max-width: 560px) {
-    .skill-board {
-        position: static;
-    }
-
-    .skill-board .skills-list {
-        position: relative;
-        width: 95%;
-        height: 400px;
-        z-index: 0;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 1rem .5rem 2rem;
-    }
-
-    .skills-list .skill {
-        width: 40%;
-    }
-
-    .skill-board .add-skill-card,
-    .add-skill-card .add-skill-form {
-        width: 95%;
-        height: auto;
-        padding: .5rem .5rem .5rem 0;
-    }
-
-    .skill-board .add-skill-card {
-        position: relative;
-    }
 }

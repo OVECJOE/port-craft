@@ -6,12 +6,13 @@
     align-items: center;
     padding: 1rem;
     width: 100%;
+    min-height: 100vh;
 }
 
 .cus-auth-card {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 65%;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 3px #fda069;
 }
@@ -105,7 +106,7 @@
 
 @media screen and (max-width: 670px) {
     .cus-auth-card {
-        width: 100%;
+        width: 95%;
     }
 
     .cus-auth-header .sign-up {

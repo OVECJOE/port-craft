@@ -26,28 +26,28 @@ const SideBar = () => {
                             alt={userInfo.name}
                             title='Your Github Avatar'
                         /> :
-                        <NavLink to='/port-craft/dashboard/change_avatar'>
+                        <NavLink to='/dashboard/change_avatar'>
                             <GoOctoface title='Your Github Avatar Not Found' />
                         </NavLink>
                     }
                     <Div column>
-                        <NavLink to='/port-craft/dashboard/home'>
+                        <NavLink to='/dashboard/home'>
                             <div><FaHome title='Home' /></div>
                         </NavLink>
-                        <NavLink to='/port-craft/dashboard/contact-info'>
+                        <NavLink to='/dashboard/contact-info'>
                             <div><FcContacts title='Add Contact Info' /></div>
                         </NavLink>
-                        <NavLink to='/port-craft/dashboard/skills'>
+                        <NavLink to='/dashboard/skills'>
                             <div><GiSkills title='Add or Remove Skills' /></div>
                         </NavLink>
-                        <NavLink to='/port-craft/dashboard/projects'>
+                        <NavLink to='/dashboard/projects'>
                             <div><GoProject title='Add or Remove Projects' /></div>
                         </NavLink>
-                        <NavLink to='/port-craft/dashboard/themes'>
+                        <NavLink to='/dashboard/themes'>
                             <div><GoSettings title='Theme Customization' /></div>
                         </NavLink>
                     </Div>
-                    <NavLink to='/port-craft/dashboard/donate'>
+                    <NavLink to='/dashboard/donate'>
                         <div><FaDonate title='Donate' /></div>
                     </NavLink>
                 </IconContext.Provider>

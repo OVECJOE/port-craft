@@ -19,6 +19,8 @@ const Div = styled.div`
     `}
 
     ${props => props.contactInfo && css`
+        min-height: 100vh;
+        position: absolute;
         background-color: #fda069;
         gap: 1rem;
         width: 100%;
