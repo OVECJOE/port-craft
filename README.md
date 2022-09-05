@@ -7,6 +7,7 @@
 - React Router Dom
 - Styled Component
 - CSS
+- Context API (Didn't see the need to use Redux)
 
 ### Live Demo
 
